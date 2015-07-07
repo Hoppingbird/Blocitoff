@@ -1,0 +1,24 @@
+<div>
+  <h1>BlocitOFF</h1>
+  <p>BlocitOFF is a To Do list so you can get shit done</p>
+  <p>
+    <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
+    <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
+    <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-primary' %>
+  </p>
+</div>
+
+<div class="row">
+  <div class="col-md-4">
+    <h2>Get shit done</h2>
+    <p>BlocitOFF lets you add stuff you need to do.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>Only do what is important!</h2>
+    <p>BlocitOFF lets you work through the list.</p>
+  </div>
+  <div class="col-md-4">
+    <h2>If you do not get to an item it must not be important</h2>
+    <p>BlocitOFF gets rid of items you did not complete after 7 days</p>
+  </div>
+</div>
