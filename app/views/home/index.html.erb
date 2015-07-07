@@ -2,9 +2,13 @@
   <h1>BlocitOFF</h1>
   <p>BlocitOFF is a To Do list so you can get shit done</p>
   <p>
+    <% if current_user %>
+        Hello <%= current_user.email %>! <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
+    <% else %>
     <%= link_to "Sign In", new_user_session_path, class: 'btn btn-primary' %> or
     <%= link_to "Sign Up", new_user_registration_path, class: 'btn btn-primary' %> today!
     <%= link_to "Logout", destroy_user_session_path, class: 'btn btn-primary' %>
+        <% end %>
   </p>
 </div>
 
