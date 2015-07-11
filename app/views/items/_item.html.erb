@@ -1,0 +1,19 @@
+<h1><%= "this is the item partial" %></h1>
+
+<div class="span8">
+  <% @items.each do |item| %>
+      <div class="media">
+        <div class="media-body">
+          <h4 class="media-heading">
+            <button type="button" class="btn btn-default btn-lg display-inline-right">
+              <span class="glyphicon glyphicon-ok completed-icon" aria-hidden="true"></span>
+            <%= link_to item.name, confirm: true, method: :delete %>
+            </button>
+            <hr>
+          </h4>
+        </div>
+      </div>
+  <% end %>
+</div>
+
+
