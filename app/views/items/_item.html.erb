@@ -5,9 +5,8 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
-            <button type="button" class="btn btn-default btn-lg display-inline-right">
-              <span class="glyphicon glyphicon-ok completed-icon" aria-hidden="true"></span>
-            <%= link_to item.name, confirm: true, method: :delete %>
+            <button type="button" class="btn btn-default btn-lg display-inline-right" id="<%=item.id %>">
+            <%= link_to item.name, [current_user, item], method: :delete, class: 'glyphicon glyphicon-ok' , data: {confirm: 'Are you sure?', remote: true} %>
             </button>
             <hr>
           </h4>

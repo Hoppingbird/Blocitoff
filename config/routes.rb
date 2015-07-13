@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :items, only: [:create, :destroy]
   end
 
+
   authenticated :user do
      root to: 'users#show', as: :authenticated_root
   end

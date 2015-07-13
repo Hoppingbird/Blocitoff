@@ -1,0 +1,8 @@
+<% if @item.destroyed? %>
+$('#' +<%= @item.id %>).fadeOut("slow");
+<% else %>
+$("<div> <%= flash[:error] %></div>");
+<% end %>
+
+
+

@@ -16,7 +16,11 @@ class ItemsController < ApplicationController
     else
       flash[:notice] = "Oops something went wrong, try again please"
     end
-    redirect_to current_user
+
+    respond_to do |format|
+      format.html { redirect_to current_user }
+      format.js
+    end
   end
 
   def edit
