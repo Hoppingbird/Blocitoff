@@ -1,4 +1,3 @@
-<h2><%= "this is the form partial" %></h2>
 
 <% if current_user %>
     <%= form_for [current_user, Item.new], remote: true do |f| %>
@@ -7,7 +6,7 @@
         <%= f.text_field :name, class: 'form-control', placeholder: 'Add a new item.' %>
       </div>
       <div class='form-group'>
-        <%= f.submit 'Save', class: 'btn btn-success' %>
+        <%= f.submit 'Save', class: 'btn btn-success', remote: true %>
       </div>
     <% end %>
 <% end %>

@@ -2,11 +2,15 @@ class ItemsController < ApplicationController
   def create
     @item = current_user.items.build(item_params)
     if @item.save
-      flash[:notice] = "Item saved successuflly!"
+      respond_to do |format|
+        format.html { redirect_to current_user, notice: "\"#{@item.name}\" was added successfully." }
+        format.js
+        end
     else
       flash[:notice] = "Oops something went wrong, try again please"
+      redirect_to current_user
     end
-    redirect_to current_user
+
   end
 
   def destroy

@@ -1,0 +1,5 @@
+<% if @item.create? %>
+$('.item_name').prepend("<%= escape_javascript(render item) %>");
+<% else %>
+$("<div> <%= flash[:error] %></div>");
+<% end %>
